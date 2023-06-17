@@ -1,0 +1,21 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "npx nitropack dev",
+    "build": "npx nitropack build",
+    "preview": "node .output/server/index.mjs"
+  },
+  "type": "module",
+  "dependencies": {
+    "@picocss/pico": "^1.5.10",
+    "c12": "^1.4.1",
+    "h3": "^1.6.6",
+    "mri": "^1.2.0",
+    "nitropack": "latest",
+    "ofetch": "^1.1.0",
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "vite": "^4.3.9"
+  }
+}
