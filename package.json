@@ -1,0 +1,35 @@
+{
+  "//": "Update fields in package.json",
+  "name": "the-next-vue-framework",
+  "version": "1.0.0",
+  "private": "true",
+  "description": "Nop, it will never be the next Vue framework! Just a way to understand Nitro and Vite!",
+  "author": "Barbapapazes <pro.soubiran@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "nuxt",
+    "vue",
+    "nitro",
+    "vite"
+  ],
+  "scripts": {
+    "dev": "node ./bin/cli.mjs dev",
+    "build": "node ./bin/cli.mjs build",
+    "preview": "node .output/server/index.mjs",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix ."
+  },
+  "dependencies": {
+    "@picocss/pico": "^1.5.10",
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.39.5",
+    "c12": "^1.4.2",
+    "eslint": "^8.43.0",
+    "h3": "^1.7.0",
+    "mri": "^1.2.0",
+    "nitropack": "^2.4.1",
+    "vite": "^4.3.9"
+  }
+}
