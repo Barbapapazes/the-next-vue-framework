@@ -25,11 +25,14 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.39.5",
+    "@vitejs/plugin-vue": "^4.2.3",
     "c12": "^1.4.2",
     "eslint": "^8.43.0",
     "h3": "^1.7.0",
     "mri": "^1.2.0",
     "nitropack": "^2.4.1",
+    "rollup-plugin-vue": "^6.0.0",
+    "unstorage": "1.6.1",
     "vite": "^4.3.9"
   }
 }

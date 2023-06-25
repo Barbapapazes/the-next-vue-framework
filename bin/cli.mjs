@@ -4,6 +4,8 @@ import { build, copyPublicAssets, createDevServer, createNitro, prepare, prerend
 import { defineEventHandler, defineLazyEventHandler, fromNodeMiddleware } from 'h3'
 import { loadConfig } from 'c12'
 import { build as buildVite, createServer } from 'vite'
+import vueVite from '@vitejs/plugin-vue'
+import vueRollup from 'rollup-plugin-vue'
 
 async function main() {
   const args = mri(process.argv.slice(2))
@@ -14,13 +16,14 @@ async function main() {
     configFile: 'paris.config.ts',
     defaultConfig: {
       vite: {
-        resolve: {
-          alias: {
-            vue: 'vue/dist/vue.esm-bundler.js',
-          },
-        },
+        plugins: [vueVite()],
       },
       nitro: {
+        rollupConfig: {
+          plugins: [
+            vueRollup(),
+          ],
+        },
         bundledStorage: ['templates'],
         devStorage: {
           templates: {
@@ -51,11 +54,7 @@ async function main() {
                 server: {
                   middlewareMode: true,
                 },
-                resolve: {
-                  alias: {
-                    vue: 'vue/dist/vue.esm-bundler.js',
-                  },
-                },
+                plugins: [vueVite()],
               })
 
               return defineEventHandler(fromNodeMiddleware(devViteServer.middlewares))
