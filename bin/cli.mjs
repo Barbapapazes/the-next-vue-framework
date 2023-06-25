@@ -75,7 +75,6 @@ async function main() {
     })
 
     const template = await nitro.storage.getItem('root:index.html')
-    console.log(template)
     await nitro.storage.setItem(
       'templates:index.html',
       template.replace(
