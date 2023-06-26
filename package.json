@@ -32,7 +32,6 @@
     "mri": "^1.2.0",
     "nitropack": "^2.4.1",
     "rollup-plugin-vue": "^6.0.0",
-    "unstorage": "1.6.1",
     "vite": "^4.3.9"
   }
 }
